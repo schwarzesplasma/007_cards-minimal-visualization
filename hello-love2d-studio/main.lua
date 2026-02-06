@@ -1,7 +1,7 @@
 local textToPrint  = 'love2d studio\nCode and debug Love2D games \nAll on your mobile device'
 local printedText  = ""
 local bg = require('background')
-local interval = 0.2
+local interval = 0.01
 local typeTimer = interval
 local typePosition = 0
 local waitCycles = 20
