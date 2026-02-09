@@ -4,7 +4,11 @@ function Card.createDeck()
 	local deck = {}
 	local suits = {}
 	local suitColors = {
-		Hearts = {1, 0, 0}}
+		Hearts = {1, 0, 0},
+		Diamonds ={1, 0, 0},
+		Clubs = {0, 0, 0},
+		Spades = {0, 0, 0}
+		}
 
 function Card.draw(card, index)
 	-- Draw card background (white)
