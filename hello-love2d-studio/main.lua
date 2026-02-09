@@ -47,5 +47,3 @@ function love.resize(w, h)
 
    lg.present()
 end
-
-
