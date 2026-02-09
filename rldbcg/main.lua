@@ -2,34 +2,34 @@
 -- This creates 5 card slots at the bottom of the screen
 
 function love.load()
-    -- Screen dimensions
-    screenWidth = love.graphics.getWidth()
-    screenHeight = love.graphics.getHeight()
+	-- Screen dimensions
+	screenWidth = love.graphics.getWidth()
+	screenHeight = love.graphics.getHeight()
 
--- Card properties
-cardWidth = 80
-cardHeight = 120
-cardSpacing = 20  -- Space between cards
+	-- Card properties
+	cardWidth = 80
+	cardHeight = 120
+	cardSpacing = 20  -- Space between cards
 
--- Calculate total width of all cards plus spacing
-totalCardsWidth = (cardWidth * 5) + (cardSpacing * 4)
+	-- Calculate total width of all cards plus spacing
+	totalCardsWidth = (cardWidth * 5) + (cardSpacing * 4)
 
--- Starting X position to center the cards horizontally
-startX = (screenWidth - totalCardsWidth) / 2
+	-- Starting X position to center the cards horizontally
+	startX = (screenWidth - totalCardsWidth) / 2
 
--- Y position (bottom of screen with some margin)
-cardY = screenHeight - cardHeight - 30
+    -- Y position (bottom of screen with some margin)
+    cardY = screenHeight - cardHeight - 30
 
--- Create a table to store our 5 card slots
-cards = {}
-    for i = 1, 5 do
+    -- Create a table to store our 5 card 
+		cards = {}
+    	for i = 1, 5 do
         cards[i] = {
             x = startX + (i - 1) * (cardWidth + cardSpacing),
             y = cardY,
             width = cardWidth,
-            height = cardHeight
-            }
-    end
+            height = 
+				}
+		end
 end
 
 function love.update(dt)
