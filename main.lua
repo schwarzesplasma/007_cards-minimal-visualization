@@ -1,12 +1,11 @@
-– Card Game - Basic UI with 5 card slots
-– This creates 5 card slots at the bottom of the screen
+-- Card Game - Basic UI with 5 card slots
+-- This creates 5 card slots at the bottom of the screen
 
 function love.load()
-– Screen dimensions
+-- Screen dimensions
 screenWidth = love.graphics.getWidth()
 screenHeight = love.graphics.getHeight()
 
-```
 -- Card properties
 cardWidth = 80
 cardHeight = 120
@@ -31,19 +30,16 @@ for i = 1, 5 do
         height = cardHeight
     }
 end
-```
-
 end
 
 function love.update(dt)
-– Game update logic will go here later
+-- Game update logic will go here later
 end
 
 function love.draw()
-– Set background color (dark green felt table)
+-- Set background color (dark green felt table)
 love.graphics.clear(0.1, 0.3, 0.2)
 
-```
 -- Draw each card slot
 for i = 1, 5 do
     -- Card background (white)
@@ -62,6 +58,5 @@ end
 
 -- Reset color
 love.graphics.setColor(1, 1, 1)
-```
 
 end
