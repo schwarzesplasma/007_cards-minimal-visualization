@@ -1,5 +1,11 @@
 Card = {}
 
+function Card.createDeck()
+	local deck = {}
+	local suits = {}
+	local suitColors = {
+		Hearts = {1, 0, 0}}
+
 function Card.draw(card, index)
 	-- Draw card background (white)
 	love.graphics.setColor(1, 1, 1)
