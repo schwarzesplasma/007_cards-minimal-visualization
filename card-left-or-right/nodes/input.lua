@@ -1,13 +1,15 @@
--- nodes/input.lua
 local Input = {}
+Input.__index = Input
 
 function Input:new()
-    return {
+    local obj = {
         left = false,
         right = false,
         up = false,
         down = false
     }
+    setmetatable(obj, Input)
+    return obj
 end
 
 function Input:update()
