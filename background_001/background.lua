@@ -29,7 +29,7 @@ local PRESETS = {
         },
     },
     soft_mist = {
-        noiseScale = 5.5,
+        noiseScale = 1.5,
         morphSpeed = 0.1,
         driftSpeed = 0.02,
         driftAngle = 10.0,
@@ -45,7 +45,7 @@ local PRESETS = {
         noiseColor = {0.9, 0.95, 1.0, 1.0},
         layer2 = {
             enabled = true,
-            noiseScale = 8.5,
+            noiseScale = 1.5,
             driftSpeed = -0.01,
             driftAngle = 200.0,
             blend = 0.3,
