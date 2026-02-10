@@ -1,22 +1,19 @@
 local Input = {}
-Input.__index = Input
 
-function Input:new()
-    local obj = {
-        left = false,
+function Input.create()
+    return {
+        left  = false,
         right = false,
-        up = false,
-        down = false
-    }
-    setmetatable(obj, Input)
-    return obj
-end
+        up    = false,
+        down  = false,
 
-function Input:update()
-    self.left  = love.keyboard.isDown("a")
-    self.right = love.keyboard.isDown("d")
-    self.up    = love.keyboard.isDown("w")
-    self.down  = love.keyboard.isDown("s")
+        update = function(self)
+            self.left  = love.keyboard.isDown("a")
+            self.right = love.keyboard.isDown("d")
+            self.up    = love.keyboard.isDown("w")
+            self.down  = love.keyboard.isDown("s")
+        end
+    }
 end
 
 return Input

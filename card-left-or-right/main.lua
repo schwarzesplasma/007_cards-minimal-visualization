@@ -1,9 +1,11 @@
-local Input = require("nodes.input")
+local Input    = require("nodes.input")
 local Movement = require("nodes.movement")
 
 function love.load()
-    inputNode = Input:new()
-    movementNode = Movement:new()
+    love.window.setMode(800, 600)
+
+    inputNode    = Input.create()
+    movementNode = Movement.create()
 end
 
 function love.update(dt)
@@ -12,5 +14,6 @@ function love.update(dt)
 end
 
 function love.draw()
+    love.graphics.setColor(1, 1, 1)
     love.graphics.circle("fill", movementNode.x, movementNode.y, 20)
 end
