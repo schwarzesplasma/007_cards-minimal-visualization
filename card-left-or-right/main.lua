@@ -1,5 +1,5 @@
 -- main.lua
-local Input				= require("nodes.inpout")
+local Input				= require("nodes.input")
 local Movement 		= require("nodes.movement")
 local Render			= require("nodes.render")
 
@@ -14,5 +14,5 @@ function love.update(dt)
 end
 
 function love.draw()
-	Render:draw/movementNode)
+	Render:draw(movementNode)
 end
