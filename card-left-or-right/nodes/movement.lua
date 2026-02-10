@@ -1,7 +1,10 @@
 -- nodes/movement.lua
 local Movement = {}
+Movement.__index = Movement
 
 function Movement:new()
+	Movementlocal obj = {
+		}
     return {
         x = 100,
         y = 100,
