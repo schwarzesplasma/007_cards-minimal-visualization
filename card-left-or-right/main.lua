@@ -13,7 +13,7 @@ function love.update(dt)
 	inputNode:update()
 	movementNode:update(dt, inputNode)
 	Dump.table(movementNode, "movementNode")
-	Dump.table(movementNode, "inputNode")
+	Dump.table(inputNode, "inputNode")
 	
 end
 
