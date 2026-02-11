@@ -1,25 +1,19 @@
-local Input    		= require("nodes.input")
+local Input						= require("nodes.input")
 local Movement 			= require("nodes.movement")
-local DumpTable			= require("nodes.dumptable")
-
-function dumpTable(t, name)
-    print("TABLE:", name or "")
-    for k, v in pairs(t) do
-        print("  ", k, "=", v, "(type:", type(v) .. ")")
-    end
-end
+local Dump						= require("nodes.dump")
 
 function love.load()
     love.window.setMode(800, 600)
 
     inputNode    = Input.create()
-    movementNode = Movement.create()
 end
 
 function love.update(dt)
 	inputNode:update()
 	movementNode:update(dt, inputNode)
-	dumpTable(movementNode, "movementNode")
+	Dump.table(movementNode, "movementNode")
+	Dump.table(movementNode, "inputNode")
+	
 end
 
 function love.draw()
