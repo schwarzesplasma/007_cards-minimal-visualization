@@ -16,4 +16,7 @@ end
 function love.draw()
     love.graphics.setColor(1, 1, 1)
     love.graphics.circle("fill", movementNode.x, movementNode.y, 20)
+		print(movementNode.x)
+		print(movementNode.speed)
+		print(movementNode.update)
 end
