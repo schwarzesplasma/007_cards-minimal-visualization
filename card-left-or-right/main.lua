@@ -1,5 +1,6 @@
-local Input    = require("nodes.input")
-local Movement = require("nodes.movement")
+local Input    		= require("nodes.input")
+local Movement 		= require("nodes.movement")
+local DumpTable		= require("nodes.dumptable")
 
 function dumpTable(t, name)
     print("TABLE:", name or "")
