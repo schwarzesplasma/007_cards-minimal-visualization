@@ -4,6 +4,7 @@ local Dump = require("utils.dump")
 local game
 
 function love.load()
+    love.graphics.setDefaultFilter("nearest", "nearest")
     os.execute("cls")
 
     game = Game.create()
