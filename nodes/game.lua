@@ -2,6 +2,7 @@ local Deck      = require("nodes.deck")
 local Hand      = require("nodes.hand")
 local Discard   = require("nodes.discard")
 local Layout    = require("config.layout")
+local Animation = require("nodes.animation")
 
 local Game = {}
 
@@ -13,6 +14,7 @@ function Game.create()
         activeCard = nil,
         hoveredCard = nil,
         discard = nil,
+        animationManager = nil,
         debug = true,
 
         drawButton = {
@@ -32,8 +34,8 @@ function Game.create()
             self.deck:shuffle()
 
             self.hand = Hand.create()
-
             self.discard = Discard.create()
+            self.animationManager = Animation.create()
 
             -- draw whatever number is the maxium size of hand
             for i = 1, self.maxHandSize do
@@ -50,6 +52,7 @@ function Game.create()
 
         update = function(self, dt)
             self:updateHover()
+            self.animationManager:update(dt)
         end,
 
         draw = function(self)
@@ -294,11 +297,11 @@ function Game.create()
                 return
             end
 
-            local startX = 200
-            local spacing = 120
-            local cardY = 400
-            local width = 100
-            local height = 150
+            local startX    = 200
+            local spacing   = 120
+            local cardY     = 400
+            local width     = 100
+            local height    = 150
 
             for i, card in ipairs(self.hand.cards) do
                 local cardX = startX + (i - 1) * spacing
